@@ -3,22 +3,148 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 32px;
-  width: 352px;
+  width: 100%;
   box-sizing: border-box;
   background: #ffffff;
   border-radius: 24px;
-  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.cardCategory {
+  margin-bottom: 8px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.cardTitle {
   margin-bottom: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #000000;
 }
 
-.card:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.card:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
+.cardTitleModal {
+  margin-bottom: 16px;
 }
 
 .cardBox {
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardPrise {
+  display: flex;
+  align-items: flex-start;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 66px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.cardSimvol {
+  margin-right: 4px;
+  margin-top: 8px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    width: 352px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 24px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .card:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  .card:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
+
+  .cardCategory {
+    margin-bottom: 8px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+  }
+
+  .cardTitle {
+    margin-bottom: 40px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: #000000;
+  }
+
+  .cardTitleModal {
+    margin-bottom: 16px;
+  }
+
+  .cardBox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cardPrise {
+    display: flex;
+    align-items: flex-start;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    color: #000000;
+  }
+
+  .cardSimvol {
+    margin-right: 4px;
+    margin-top: 8px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    color: #000000;
+  }
 }

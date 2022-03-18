@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../Button/Button';
-import Modal from '../Modal/Modal'
+import Modal from '../Modal/Modal';
 import css from './Card.module.css'
 
 function Card({ name, category, price }) {
@@ -12,12 +12,11 @@ function Card({ name, category, price }) {
 
   return (
     <li className={css.card}>
-      <p>{category}</p>
-      <h3>{name}</h3>
+      <p className={css.cardCategory}>{category}</p>
+      <h3 className={css.cardTitle}>{name}</h3>
       <div className={css.cardBox}>
-        <p><span>$</span>{price}</p>
+        <p className={css.cardPrise}><span className={css.cardSimvol}>$</span>{price}</p>
         <Button text="buy" type="button" onClick={openModal} />
-
         {isActive && (
           <Modal
             name={name}

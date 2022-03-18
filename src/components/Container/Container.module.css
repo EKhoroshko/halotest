@@ -3,6 +3,16 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  width: 1280px;
-  padding: 104px 152px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 1200px;
+    padding: 104px 152px;
+  }
 }
