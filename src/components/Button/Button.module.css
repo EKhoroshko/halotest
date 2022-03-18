@@ -29,6 +29,7 @@
 .buttonSubmit {
   display: flex;
   align-items: center;
+  margin-top: 32px;
   padding: 14px 96px;
   justify-content: center;
   width: 100%;
@@ -47,8 +48,8 @@
   flex: none;
   order: 3;
   flex-grow: 0;
-  margin: 2px 0px;
 }
+
 .buttonSubmit:hover .buttonArrow {
   display: block;
   margin-left: 8px;
