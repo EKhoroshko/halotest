@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
-import css from './Card.module.css'
+import { blockScroll, unBlockScroll } from '../../helpers/Body'
+import css from './Card.module.css';
 
 function Card({ name, category, price }) {
   const [isActive, setIsActive] = useState(false);
 
   const openModal = () => {
     setIsActive(!isActive);
+    if (isActive === false) {
+      blockScroll();
+    } else {
+      unBlockScroll();
+    }
   };
 
   return (

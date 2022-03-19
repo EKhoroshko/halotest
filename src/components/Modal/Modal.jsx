@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import cn from 'classnames';
 import close from '../../img/x-min.svg';
 import Form from '../Form/Form';
-import cardcss from '../Card/Card.module.css'
+import cardcss from '../Card/Card.module.css';
 import css from './Modal.module.css';
 
 const modalRoot = document.querySelector("#modal-root");

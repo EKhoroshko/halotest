@@ -29,7 +29,6 @@
 .buttonSubmit {
   display: flex;
   align-items: center;
-  margin-top: 32px;
   padding: 14px 96px;
   justify-content: center;
   width: 100%;

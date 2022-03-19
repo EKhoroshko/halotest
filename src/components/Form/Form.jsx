@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ReactComponent as Arrow } from '../../img/arrow.svg';
 import cn from 'classnames';
-import Button from '../Button/Button'
+import Button from '../Button/Button';
+import { cheakNum } from '../../helpers/cheakNum'
 import css from './Form.module.css';
 import but from '../Button/Button.module.css'
 
@@ -14,6 +15,7 @@ function Form() {
   const [phoneError, setPhoneError] = useState('');
   const [nameFocus, setNameFocus] = useState(false);
   const [numberFocus, setNumberFocus] = useState(false);
+
 
   const changeName = (e) => {
     setName(e.target.value)
@@ -36,11 +38,10 @@ function Form() {
   const handlerBlurName = () => {
     setNameInput(true)
     setNameFocus(false);
-    if (name.length < 5) {
-      setNameError('Name must be more than 5 letters')
-      if (!name) {
-        setNameError('Name field cannot be empty')
-      }
+    if (cheakNum(name) !== undefined) {
+      setNameError('Only letters allowed')
+    } else if (!name) {
+      setNameError('This field in required')
     } else {
       setNameError("")
     }
@@ -49,10 +50,10 @@ function Form() {
   const handlerBlurNumber = () => {
     setPhoneInput(true);
     setNumberFocus(false);
-    if (phone.length < 12) {
-      setPhoneError("Must be 12 characters")
+    if (phone.length < 12 || phone.length > 12) {
+      setPhoneError("Should contain 12 characters")
       if (!phone) {
-        setPhoneError('Phone field cannot be empty')
+        setPhoneError('This field in required')
       }
     } else {
       setPhoneError('')
@@ -61,7 +62,10 @@ function Form() {
 
   const submitForm = (e) => {
     e.preventDefault()
-    if (nameError !== "" && phoneError !== "") {
+    if (nameError === "" &&
+      phoneError === "" &&
+      name !== "" &&
+      phone !== "") {
       const submit = {
         name,
         phone,
@@ -69,6 +73,8 @@ function Form() {
       console.log(submit);
       clearForm();
     } else {
+      setPhoneInput(true);
+      setNameInput(true);
       setNameError("Fill in required fields")
       setPhoneError("Fill in required fields")
     }
@@ -86,9 +92,9 @@ function Form() {
       <input
         className={cn(css.formInput,
           {
-            [css.valid]: name.length >= 5,
+            [css.valid]: name.length >= 1 && nameFocus === false,
             [css.err]: nameError.length > 0,
-            [css.formInput]: nameFocus,
+            [css.formInput]: nameFocus === true,
           }
         )}
         name="name"
@@ -104,7 +110,7 @@ function Form() {
       <input
         className={cn(css.formInput,
           {
-            [css.valid]: phone.length >= 12,
+            [css.valid]: phone.length === 12 && numberFocus === false,
             [css.err]: phoneError.length > 0,
             [css.formInput]: numberFocus === true,
           }
