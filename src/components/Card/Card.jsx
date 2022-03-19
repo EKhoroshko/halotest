@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react'
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
@@ -18,20 +19,23 @@ function Card({ name, category, price }) {
 
   return (
     <li className={css.card}>
-      <p className={css.cardCategory}>{category}</p>
-      <h3 className={css.cardTitle}>{name}</h3>
-      <div className={css.cardBox}>
-        <p className={css.cardPrise}><span className={css.cardSimvol}>$</span>{price}</p>
-        <Button text="buy" type="button" onClick={openModal} />
-        {isActive && (
-          <Modal
-            name={name}
-            category={category}
-            price={price}
-            onClose={openModal}
-          />
-        )}
-      </div>
+      <a className={css.cardHover} href="#">
+        <p className={css.cardCategory}>{category}</p>
+        <h3 className={css.cardTitle}>{name}</h3>
+        <div className={css.cardBox}>
+          <p className={css.cardPrise}><span className={css.cardSimvol}>$</span>{price}</p>
+          <Button text="buy" type="button" onClick={openModal} />
+          {isActive && (
+            <Modal
+              name={name}
+              category={category}
+              price={price}
+              onClose={openModal}
+            />
+          )}
+        </div>
+
+      </a>
     </li>
   )
 }

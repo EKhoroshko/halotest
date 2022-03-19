@@ -1,13 +1,20 @@
 .card {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cardHover {
   display: flex;
+  border-radius: 24px;
   flex-direction: column;
   align-items: flex-start;
   padding: 32px;
-  width: 100%;
   box-sizing: border-box;
   background: #ffffff;
-  border-radius: 24px;
-  margin-bottom: 20px;
+}
+
+.cardHover:hover {
+  box-shadow: 24px 24px 40px rgba(75, 207, 160, 0.08);
 }
 
 .cardCategory {
@@ -69,16 +76,23 @@
 
 @media screen and (min-width: 1200px) {
   .card {
+    width: 352px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .cardHover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 32px;
-    width: 352px;
     box-sizing: border-box;
     background: #ffffff;
     border-radius: 24px;
-    margin-right: 40px;
-    margin-bottom: 40px;
+  }
+
+  .cardHover:hover {
+    box-shadow: 24px 24px 40px rgba(75, 207, 160, 0.08);
   }
 
   .card:nth-child(3n) {
