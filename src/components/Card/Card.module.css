@@ -74,6 +74,21 @@
   color: #000000;
 }
 
+@media screen and (min-width: 768px) {
+  .card {
+    width: 352px;
+    margin-right: 20px;
+  }
+
+  .card:nth-child(2n) {
+    margin-right: 0px;
+  }
+
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .card {
     width: 352px;
@@ -101,6 +116,9 @@
 
   .card:nth-last-child(-n + 3) {
     margin-bottom: 0px;
+  }
+  .card:nth-child(2n) {
+    margin-right: 40px;
   }
 
   .cardCategory {
