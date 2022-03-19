@@ -16,7 +16,6 @@ function Form() {
   const [nameFocus, setNameFocus] = useState(false);
   const [numberFocus, setNumberFocus] = useState(false);
 
-
   const changeName = (e) => {
     setName(e.target.value)
   }
@@ -62,21 +61,19 @@ function Form() {
 
   const submitForm = (e) => {
     e.preventDefault()
-    if (nameError === "" &&
-      phoneError === "" &&
-      name !== "" &&
-      phone !== "") {
+    if (nameError !== "" || name === "") {
+      setNameInput(true);
+      setNameError("Fill in required fields")
+    } else if (phoneError !== "" || phone === "") {
+      setPhoneInput(true);
+      setPhoneError("Fill in required fields")
+    } else {
       const submit = {
         name,
         phone,
       }
       console.log(submit);
       clearForm();
-    } else {
-      setPhoneInput(true);
-      setNameInput(true);
-      setNameError("Fill in required fields")
-      setPhoneError("Fill in required fields")
     }
   }
 
