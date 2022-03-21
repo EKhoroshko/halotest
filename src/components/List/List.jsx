@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { getProducts } from '../../redax/product/selectors';
-import { v4 as uuidv4 } from 'uuid';
 import Card from '../Card/Card';
 import css from './List.module.css'
 
@@ -12,7 +11,7 @@ function List() {
   return (
     <ul className={css.list}>
       {list && list.map(item => <Card
-        key={uuidv4()}
+        key={item.name}
         name={item.name}
         category={item.category}
         price={item.price}

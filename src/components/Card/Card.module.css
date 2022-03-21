@@ -19,8 +19,6 @@
 
 .cardCategory {
   margin-bottom: 8px;
-  font-family: "Roboto";
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
@@ -31,9 +29,6 @@
 
 .cardTitle {
   margin-bottom: 40px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
   font-size: 34px;
   line-height: 42px;
   letter-spacing: -0.02em;
@@ -55,8 +50,6 @@
 .cardPrise {
   display: flex;
   align-items: flex-start;
-  font-family: "Roboto";
-  font-weight: 400;
   font-size: 50px;
   line-height: 66px;
   letter-spacing: -0.02em;
@@ -66,8 +59,6 @@
 .cardSimvol {
   margin-right: 4px;
   margin-top: 8px;
-  font-family: "Roboto";
-  font-weight: 400;
   font-size: 30px;
   line-height: 35px;
   letter-spacing: -0.02em;
@@ -123,8 +114,6 @@
 
   .cardCategory {
     margin-bottom: 8px;
-    font-family: "Roboto";
-    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
@@ -135,8 +124,6 @@
 
   .cardTitle {
     margin-bottom: 40px;
-    font-family: "Roboto";
-    font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
@@ -159,8 +146,6 @@
   .cardPrise {
     display: flex;
     align-items: flex-start;
-    font-family: "Roboto";
-    font-weight: 400;
     font-size: 60px;
     line-height: 72px;
     letter-spacing: -0.02em;
@@ -170,8 +155,6 @@
   .cardSimvol {
     margin-right: 4px;
     margin-top: 8px;
-    font-family: "Roboto";
-    font-weight: 400;
     font-size: 30px;
     line-height: 35px;
     letter-spacing: -0.02em;
